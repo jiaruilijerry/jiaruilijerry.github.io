@@ -1,12 +1,1166 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
-    <title>GitHub Page with Embedded Jupyter Notebook</title>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>33e2b7eecb8b492882ac93b0318ee335</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { color: #008000; } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { color: #008000; font-weight: bold; } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
 </head>
 <body>
-    <h1>Welcome to My GitHub Page</h1>
-    
-    <!-- Embed the Jupyter Notebook using nbviewer -->
-    <iframe src="https://nbviewer.jupyter.org/github/jiaruilijerry/jiaruilijerry.github.io/blob/master/finalProj.ipynb" style="width: 100%; height: 800px;"></iframe>
+<div class="cell markdown">
+<p><a
+href="https://archive.ics.uci.edu/dataset/544/estimation+of+obesity+levels+based+on+eating+habits+and+physical+condition"
+class="uri">https://archive.ics.uci.edu/dataset/544/estimation+of+obesity+levels+based+on+eating+habits+and+physical+condition</a></p>
+</div>
+<div class="cell code" data-execution_count="197">
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.linear_model <span class="im">import</span> LogisticRegression</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.model_selection <span class="im">import</span> train_test_split</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.model_selection <span class="im">import</span> KFold</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.model_selection <span class="im">import</span> cross_val_score</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy <span class="im">import</span> stats <span class="im">as</span> st</span></code></pre></div>
+</div>
+<div class="cell code" data-execution_count="198">
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>columns <span class="op">=</span> [<span class="st">&quot;Gender&quot;</span>,<span class="st">&quot;Age&quot;</span>,<span class="st">&quot;Height&quot;</span>,<span class="st">&quot;Weight&quot;</span>,<span class="st">&quot;family_history_with_overweight&quot;</span>,<span class="st">&quot;FAVC&quot;</span>,<span class="st">&quot;FCVC&quot;</span>,<span class="st">&quot;NCP&quot;</span>,<span class="st">&quot;CAEC&quot;</span>,<span class="st">&quot;SMOKE&quot;</span>,<span class="st">&quot;CH2O&quot;</span>,<span class="st">&quot;SCC&quot;</span>,<span class="st">&quot;FAF&quot;</span>,<span class="st">&quot;TUE&quot;</span>,<span class="st">&quot;CALC&quot;</span>,<span class="st">&quot;MTRANS&quot;</span>,<span class="st">&quot;NObeyesdad&quot;</span>]</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">&quot;ObesityDataSet_raw_and_data_sinthetic.csv&quot;</span>, names<span class="op">=</span>columns)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> df.drop(<span class="dv">0</span>)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>df[<span class="st">&quot;Age&quot;</span>] <span class="op">=</span> df[<span class="st">&quot;Age&quot;</span>].astype(<span class="bu">float</span>).<span class="bu">round</span>().astype(<span class="bu">int</span>)</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>df[<span class="st">&quot;Weight&quot;</span>] <span class="op">=</span> df[<span class="st">&quot;Weight&quot;</span>].astype(<span class="bu">float</span>).<span class="bu">round</span>().astype(<span class="bu">int</span>)</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>df[<span class="st">&quot;FCVC&quot;</span>] <span class="op">=</span> df[<span class="st">&quot;FCVC&quot;</span>].astype(<span class="bu">float</span>).<span class="bu">round</span>().astype(<span class="bu">int</span>)</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>df.head()</span></code></pre></div>
+<div class="output execute_result" data-execution_count="198">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Gender</th>
+      <th>Age</th>
+      <th>Height</th>
+      <th>Weight</th>
+      <th>family_history_with_overweight</th>
+      <th>FAVC</th>
+      <th>FCVC</th>
+      <th>NCP</th>
+      <th>CAEC</th>
+      <th>SMOKE</th>
+      <th>CH2O</th>
+      <th>SCC</th>
+      <th>FAF</th>
+      <th>TUE</th>
+      <th>CALC</th>
+      <th>MTRANS</th>
+      <th>NObeyesdad</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>Female</td>
+      <td>21</td>
+      <td>1.62</td>
+      <td>64</td>
+      <td>yes</td>
+      <td>no</td>
+      <td>2</td>
+      <td>3</td>
+      <td>Sometimes</td>
+      <td>no</td>
+      <td>2</td>
+      <td>no</td>
+      <td>0</td>
+      <td>1</td>
+      <td>no</td>
+      <td>Public_Transportation</td>
+      <td>Normal_Weight</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Female</td>
+      <td>21</td>
+      <td>1.52</td>
+      <td>56</td>
+      <td>yes</td>
+      <td>no</td>
+      <td>3</td>
+      <td>3</td>
+      <td>Sometimes</td>
+      <td>yes</td>
+      <td>3</td>
+      <td>yes</td>
+      <td>3</td>
+      <td>0</td>
+      <td>Sometimes</td>
+      <td>Public_Transportation</td>
+      <td>Normal_Weight</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Male</td>
+      <td>23</td>
+      <td>1.8</td>
+      <td>77</td>
+      <td>yes</td>
+      <td>no</td>
+      <td>2</td>
+      <td>3</td>
+      <td>Sometimes</td>
+      <td>no</td>
+      <td>2</td>
+      <td>no</td>
+      <td>2</td>
+      <td>1</td>
+      <td>Frequently</td>
+      <td>Public_Transportation</td>
+      <td>Normal_Weight</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Male</td>
+      <td>27</td>
+      <td>1.8</td>
+      <td>87</td>
+      <td>no</td>
+      <td>no</td>
+      <td>3</td>
+      <td>3</td>
+      <td>Sometimes</td>
+      <td>no</td>
+      <td>2</td>
+      <td>no</td>
+      <td>2</td>
+      <td>0</td>
+      <td>Frequently</td>
+      <td>Walking</td>
+      <td>Overweight_Level_I</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Male</td>
+      <td>22</td>
+      <td>1.78</td>
+      <td>90</td>
+      <td>no</td>
+      <td>no</td>
+      <td>2</td>
+      <td>1</td>
+      <td>Sometimes</td>
+      <td>no</td>
+      <td>2</td>
+      <td>no</td>
+      <td>0</td>
+      <td>0</td>
+      <td>Sometimes</td>
+      <td>Public_Transportation</td>
+      <td>Overweight_Level_II</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="cell code" data-execution_count="199">
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># male = 1; female = 0</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>df[<span class="st">&quot;Gender&quot;</span>] <span class="op">=</span> df[<span class="st">&quot;Gender&quot;</span>].<span class="bu">apply</span>(<span class="kw">lambda</span> x: <span class="dv">0</span> <span class="cf">if</span> x <span class="op">==</span> <span class="st">&quot;Female&quot;</span> <span class="cf">else</span> <span class="dv">1</span>)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># yes = 1; no = 0</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>df[<span class="st">&quot;family_history_with_overweight&quot;</span>] <span class="op">=</span> df[<span class="st">&quot;family_history_with_overweight&quot;</span>].<span class="bu">apply</span>(<span class="kw">lambda</span> x: <span class="dv">1</span> <span class="cf">if</span> x <span class="op">==</span> <span class="st">&quot;yes&quot;</span> <span class="cf">else</span> <span class="dv">0</span>)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co"># yes = 1; no = 0</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>df[<span class="st">&quot;FAVC&quot;</span>] <span class="op">=</span> df[<span class="st">&quot;FAVC&quot;</span>].<span class="bu">apply</span>(<span class="kw">lambda</span> x: <span class="dv">1</span> <span class="cf">if</span> x <span class="op">==</span> <span class="st">&quot;yes&quot;</span> <span class="cf">else</span> <span class="dv">0</span>)</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="co"># yes = 1; no = 0</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>df[<span class="st">&quot;SMOKE&quot;</span>] <span class="op">=</span> df[<span class="st">&quot;SMOKE&quot;</span>].<span class="bu">apply</span>(<span class="kw">lambda</span> x: <span class="dv">1</span> <span class="cf">if</span> x <span class="op">==</span> <span class="st">&quot;yes&quot;</span> <span class="cf">else</span> <span class="dv">0</span>)</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="co"># yes = 1; no = 0</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>df[<span class="st">&quot;SCC&quot;</span>] <span class="op">=</span> df[<span class="st">&quot;SCC&quot;</span>].<span class="bu">apply</span>(<span class="kw">lambda</span> x: <span class="dv">1</span> <span class="cf">if</span> x <span class="op">==</span> <span class="st">&quot;yes&quot;</span> <span class="cf">else</span> <span class="dv">0</span>)</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="co"># walking = 1; vehicle = 0</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>df[<span class="st">&quot;MTRANS&quot;</span>] <span class="op">=</span> df[<span class="st">&quot;MTRANS&quot;</span>].<span class="bu">apply</span>(<span class="kw">lambda</span> x: <span class="dv">1</span> <span class="cf">if</span> x <span class="op">==</span> <span class="st">&quot;Walking&quot;</span> <span class="cf">else</span> <span class="dv">0</span>)</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>label_mapping <span class="op">=</span> {</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;Normal_Weight&quot;</span>: <span class="dv">0</span>,</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;Insufficient_Weight&quot;</span>: <span class="dv">0</span>,</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;Overweight_Level_I&quot;</span>: <span class="fl">0.5</span>,</span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;Overweight_Level_II&quot;</span>: <span class="fl">0.5</span>,</span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;Obesity_Type_I&quot;</span>: <span class="dv">1</span>,</span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;Obesity_Type_II&quot;</span>: <span class="dv">2</span>,</span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;Obesity_Type_III&quot;</span>: <span class="dv">3</span></span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a><span class="co"># Apply the mapping using the lambda function</span></span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>df[<span class="st">&quot;NObeyesdad&quot;</span>] <span class="op">=</span> df[<span class="st">&quot;NObeyesdad&quot;</span>].<span class="bu">apply</span>(<span class="kw">lambda</span> x: label_mapping.get(x, x))</span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>label_mapping <span class="op">=</span> {</span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;no&quot;</span>: <span class="dv">0</span>,</span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;Sometimes&quot;</span>: <span class="dv">1</span>,</span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;Frequently&quot;</span>: <span class="dv">2</span>,</span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;Always&quot;</span>: <span class="dv">3</span>,</span>
+<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a><span class="co"># Apply the mapping using the lambda function</span></span>
+<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a>df[<span class="st">&quot;CALC&quot;</span>] <span class="op">=</span> df[<span class="st">&quot;CALC&quot;</span>].<span class="bu">apply</span>(<span class="kw">lambda</span> x: label_mapping.get(x, x))</span>
+<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a>df[<span class="st">&quot;CAEC&quot;</span>] <span class="op">=</span> df[<span class="st">&quot;CAEC&quot;</span>].<span class="bu">apply</span>(<span class="kw">lambda</span> x: label_mapping.get(x, x))</span>
+<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a>df.head(<span class="dv">20</span>)</span></code></pre></div>
+<div class="output execute_result" data-execution_count="199">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Gender</th>
+      <th>Age</th>
+      <th>Height</th>
+      <th>Weight</th>
+      <th>family_history_with_overweight</th>
+      <th>FAVC</th>
+      <th>FCVC</th>
+      <th>NCP</th>
+      <th>CAEC</th>
+      <th>SMOKE</th>
+      <th>CH2O</th>
+      <th>SCC</th>
+      <th>FAF</th>
+      <th>TUE</th>
+      <th>CALC</th>
+      <th>MTRANS</th>
+      <th>NObeyesdad</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>0</td>
+      <td>21</td>
+      <td>1.62</td>
+      <td>64</td>
+      <td>1</td>
+      <td>0</td>
+      <td>2</td>
+      <td>3</td>
+      <td>1</td>
+      <td>0</td>
+      <td>2</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0</td>
+      <td>21</td>
+      <td>1.52</td>
+      <td>56</td>
+      <td>1</td>
+      <td>0</td>
+      <td>3</td>
+      <td>3</td>
+      <td>1</td>
+      <td>1</td>
+      <td>3</td>
+      <td>1</td>
+      <td>3</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1</td>
+      <td>23</td>
+      <td>1.8</td>
+      <td>77</td>
+      <td>1</td>
+      <td>0</td>
+      <td>2</td>
+      <td>3</td>
+      <td>1</td>
+      <td>0</td>
+      <td>2</td>
+      <td>0</td>
+      <td>2</td>
+      <td>1</td>
+      <td>2</td>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1</td>
+      <td>27</td>
+      <td>1.8</td>
+      <td>87</td>
+      <td>0</td>
+      <td>0</td>
+      <td>3</td>
+      <td>3</td>
+      <td>1</td>
+      <td>0</td>
+      <td>2</td>
+      <td>0</td>
+      <td>2</td>
+      <td>0</td>
+      <td>2</td>
+      <td>1</td>
+      <td>0.5</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>1</td>
+      <td>22</td>
+      <td>1.78</td>
+      <td>90</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>2</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0.5</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>1</td>
+      <td>29</td>
+      <td>1.62</td>
+      <td>53</td>
+      <td>0</td>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+      <td>1</td>
+      <td>0</td>
+      <td>2</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>0</td>
+      <td>23</td>
+      <td>1.5</td>
+      <td>55</td>
+      <td>1</td>
+      <td>1</td>
+      <td>3</td>
+      <td>3</td>
+      <td>1</td>
+      <td>0</td>
+      <td>2</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>1</td>
+      <td>22</td>
+      <td>1.64</td>
+      <td>53</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2</td>
+      <td>3</td>
+      <td>1</td>
+      <td>0</td>
+      <td>2</td>
+      <td>0</td>
+      <td>3</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>1</td>
+      <td>24</td>
+      <td>1.78</td>
+      <td>64</td>
+      <td>1</td>
+      <td>1</td>
+      <td>3</td>
+      <td>3</td>
+      <td>1</td>
+      <td>0</td>
+      <td>2</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>2</td>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>1</td>
+      <td>22</td>
+      <td>1.72</td>
+      <td>68</td>
+      <td>1</td>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+      <td>1</td>
+      <td>0</td>
+      <td>2</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>1</td>
+      <td>26</td>
+      <td>1.85</td>
+      <td>105</td>
+      <td>1</td>
+      <td>1</td>
+      <td>3</td>
+      <td>3</td>
+      <td>2</td>
+      <td>0</td>
+      <td>3</td>
+      <td>0</td>
+      <td>2</td>
+      <td>2</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>0</td>
+      <td>21</td>
+      <td>1.72</td>
+      <td>80</td>
+      <td>1</td>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+      <td>2</td>
+      <td>0</td>
+      <td>2</td>
+      <td>1</td>
+      <td>2</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0.5</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>1</td>
+      <td>22</td>
+      <td>1.65</td>
+      <td>56</td>
+      <td>0</td>
+      <td>0</td>
+      <td>3</td>
+      <td>3</td>
+      <td>1</td>
+      <td>0</td>
+      <td>3</td>
+      <td>0</td>
+      <td>2</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>1</td>
+      <td>41</td>
+      <td>1.8</td>
+      <td>99</td>
+      <td>0</td>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+      <td>1</td>
+      <td>0</td>
+      <td>2</td>
+      <td>0</td>
+      <td>2</td>
+      <td>1</td>
+      <td>2</td>
+      <td>0</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>1</td>
+      <td>23</td>
+      <td>1.77</td>
+      <td>60</td>
+      <td>1</td>
+      <td>1</td>
+      <td>3</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>0</td>
+      <td>22</td>
+      <td>1.7</td>
+      <td>66</td>
+      <td>1</td>
+      <td>0</td>
+      <td>3</td>
+      <td>3</td>
+      <td>3</td>
+      <td>0</td>
+      <td>2</td>
+      <td>1</td>
+      <td>2</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>1</td>
+      <td>27</td>
+      <td>1.93</td>
+      <td>102</td>
+      <td>1</td>
+      <td>1</td>
+      <td>2</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0.5</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>0</td>
+      <td>29</td>
+      <td>1.53</td>
+      <td>78</td>
+      <td>0</td>
+      <td>1</td>
+      <td>2</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>2</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>0</td>
+      <td>30</td>
+      <td>1.71</td>
+      <td>82</td>
+      <td>1</td>
+      <td>1</td>
+      <td>3</td>
+      <td>4</td>
+      <td>2</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0.5</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>0</td>
+      <td>23</td>
+      <td>1.65</td>
+      <td>70</td>
+      <td>1</td>
+      <td>0</td>
+      <td>2</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>2</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0.5</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="cell code" data-execution_count="200">
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>df.shape</span></code></pre></div>
+<div class="output execute_result" data-execution_count="200">
+<pre><code>(2111, 17)</code></pre>
+</div>
+</div>
+<div class="cell code" data-execution_count="201">
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>missing <span class="op">=</span> []</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="co"># loop through all rows in the dataframe with df.iterrows()</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, row <span class="kw">in</span> df.iterrows():</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">try</span>:</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>        <span class="co"># check if each value in the row can be turned into a float</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>        [<span class="bu">float</span>(val) <span class="cf">for</span> val <span class="kw">in</span> <span class="bu">list</span>(row)]</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">except</span>:</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>        <span class="co"># if cannot be converted to a float, this row has invalid data.</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>        missing.append(i)</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>missing</span></code></pre></div>
+<div class="output execute_result" data-execution_count="201">
+<pre><code>[]</code></pre>
+</div>
+</div>
+<div class="cell code" data-execution_count="202">
+<div class="sourceCode" id="cb8"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">16</span>, <span class="dv">6</span>))</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>corr <span class="op">=</span> df.corr()</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>mask<span class="op">=</span>np.triu(corr)</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>np.fill_diagonal(mask, <span class="va">False</span>)</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>heatmap <span class="op">=</span> sns.heatmap(corr, cmap<span class="op">=</span><span class="st">&quot;coolwarm&quot;</span>, vmin<span class="op">=-</span><span class="dv">1</span>, vmax<span class="op">=</span><span class="dv">1</span>, annot<span class="op">=</span><span class="va">True</span>, mask<span class="op">=</span>mask)</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>heatmap.set_title(<span class="st">&quot;Correlation Heatmap for ...&quot;</span>, fontdict<span class="op">=</span>{<span class="st">&quot;fontsize&quot;</span>:<span class="dv">12</span>}, pad<span class="op">=</span><span class="dv">12</span>)</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<div class="output display_data">
+<p><img
+src="vertopal_8dce5c7514b6453aa588921b65c94266/8ac01406e1784f7526d03d2494868c505b35bcbf.png" /></p>
+</div>
+</div>
+<div class="cell code" data-execution_count="203">
+<div class="sourceCode" id="cb9"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>allAge <span class="op">=</span> df[<span class="st">&quot;Age&quot;</span>].sort_values().unique()</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>allAge</span></code></pre></div>
+<div class="output execute_result" data-execution_count="203">
+<pre><code>array([14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30,
+       31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47,
+       48, 51, 52, 55, 56, 61])</code></pre>
+</div>
+</div>
+<div class="cell code" data-execution_count="204">
+<div class="sourceCode" id="cb11"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>allAge.size</span></code></pre></div>
+<div class="output execute_result" data-execution_count="204">
+<pre><code>40</code></pre>
+</div>
+</div>
+<div class="cell code" data-execution_count="205">
+<div class="sourceCode" id="cb13"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>labels <span class="op">=</span> [<span class="st">&quot;Ages 14 to 23&quot;</span>, <span class="st">&quot;Ages 24 to 33&quot;</span>, <span class="st">&quot;Ages 34 to 43&quot;</span>, <span class="st">&quot;Ages 44 to 61&quot;</span>]</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>bins <span class="op">=</span> [<span class="dv">14</span>, <span class="dv">29</span>, <span class="dv">33</span>, <span class="dv">43</span>, <span class="dv">61</span>]</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>ages <span class="op">=</span> df.groupby(pd.cut(df[<span class="st">&quot;Age&quot;</span>], bins))</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>age_dfs <span class="op">=</span> []</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, age <span class="kw">in</span> <span class="bu">enumerate</span>(ages.groups.keys()):</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>    curr <span class="op">=</span> ages.get_group(age)</span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>    age_dfs.append(curr)</span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f&quot;Length of bin </span><span class="sc">{</span>i <span class="op">+</span> <span class="dv">1</span><span class="sc">}</span><span class="ss"> (</span><span class="sc">{</span>labels[i]<span class="sc">}</span><span class="ss">): </span><span class="sc">{</span><span class="bu">len</span>(curr)<span class="sc">}</span><span class="ss">&quot;</span>)</span></code></pre></div>
+<div class="output stream stdout">
+<pre><code>Length of bin 1 (Ages 14 to 23): 1724
+Length of bin 2 (Ages 24 to 33): 178
+Length of bin 3 (Ages 34 to 43): 185
+Length of bin 4 (Ages 44 to 61): 23
+</code></pre>
+</div>
+</div>
+<div class="cell code" data-execution_count="206">
+<div class="sourceCode" id="cb15"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="bu">min</span> <span class="op">=</span> np.<span class="bu">min</span>(df[<span class="st">&quot;NObeyesdad&quot;</span>])</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="bu">max</span> <span class="op">=</span> np.<span class="bu">max</span>(df[<span class="st">&quot;NObeyesdad&quot;</span>])</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>fig, axs <span class="op">=</span> plt.subplots(<span class="dv">4</span>, figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">15</span>))</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">4</span>):</span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>    axs[i].hist(age_dfs[i][<span class="st">&quot;NObeyesdad&quot;</span>], <span class="bu">range</span><span class="op">=</span>(<span class="bu">min</span>, <span class="bu">max</span>), alpha<span class="op">=</span><span class="fl">0.7</span>, label<span class="op">=</span>labels[i])</span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>    axs[i].<span class="bu">set</span>(title<span class="op">=</span><span class="ss">f&quot;Distribution of obesity level for </span><span class="sc">{</span>labels[i]<span class="sc">}</span><span class="ss">&quot;</span>, ylabel<span class="op">=</span><span class="st">&quot;Frequency&quot;</span>)</span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<div class="output display_data">
+<p><img
+src="vertopal_8dce5c7514b6453aa588921b65c94266/76deb1c170516f6edb0e57baa9df7536f35b4469.png" /></p>
+</div>
+</div>
+<div class="cell code" data-execution_count="207">
+<div class="sourceCode" id="cb16"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>allWeight <span class="op">=</span> df[<span class="st">&quot;Weight&quot;</span>].sort_values().unique()</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>allWeight</span></code></pre></div>
+<div class="output execute_result" data-execution_count="207">
+<pre><code>array([ 39,  40,  41,  42,  43,  44,  45,  46,  47,  48,  49,  50,  51,
+        52,  53,  54,  55,  56,  57,  58,  59,  60,  61,  62,  63,  64,
+        65,  66,  67,  68,  69,  70,  71,  72,  73,  74,  75,  76,  77,
+        78,  79,  80,  81,  82,  83,  84,  85,  86,  87,  88,  89,  90,
+        91,  92,  93,  94,  95,  96,  97,  98,  99, 100, 101, 102, 103,
+       104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116,
+       117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129,
+       130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142,
+       143, 144, 147, 149, 150, 151, 152, 153, 154, 155, 156, 161, 165,
+       173])</code></pre>
+</div>
+</div>
+<div class="cell code" data-execution_count="208">
+<div class="sourceCode" id="cb18"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>allWeight.size</span></code></pre></div>
+<div class="output execute_result" data-execution_count="208">
+<pre><code>118</code></pre>
+</div>
+</div>
+<div class="cell code" data-execution_count="209">
+<div class="sourceCode" id="cb20"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>labels <span class="op">=</span> [<span class="st">&quot;Weights 39 to 69&quot;</span>, <span class="st">&quot;Weights 70 to 89&quot;</span>, <span class="st">&quot;Weights 90 to 119&quot;</span>, <span class="st">&quot;Weights 120 to 139&quot;</span>, <span class="st">&quot;Weights 140 to 173&quot;</span>]</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>bins <span class="op">=</span> [<span class="dv">39</span>, <span class="dv">69</span>, <span class="dv">89</span>, <span class="dv">119</span>, <span class="dv">139</span>, <span class="dv">173</span>]</span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>weights <span class="op">=</span> df.groupby(pd.cut(df[<span class="st">&quot;Weight&quot;</span>], bins))</span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>weights_dfs <span class="op">=</span> []</span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, w <span class="kw">in</span> <span class="bu">enumerate</span>(weights.groups.keys()):</span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a>    curr <span class="op">=</span> weights.get_group(w)</span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a>    weights_dfs.append(curr)</span>
+<span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f&quot;Length of bin </span><span class="sc">{</span>i <span class="op">+</span> <span class="dv">1</span><span class="sc">}</span><span class="ss"> (</span><span class="sc">{</span>labels[i]<span class="sc">}</span><span class="ss">): </span><span class="sc">{</span><span class="bu">len</span>(curr)<span class="sc">}</span><span class="ss">&quot;</span>)</span></code></pre></div>
+<div class="output stream stdout">
+<pre><code>Length of bin 1 (Weights 39 to 69): 603
+Length of bin 2 (Weights 70 to 89): 621
+Length of bin 3 (Weights 90 to 119): 632
+Length of bin 4 (Weights 120 to 139): 219
+Length of bin 5 (Weights 140 to 173): 33
+</code></pre>
+</div>
+</div>
+<div class="cell code" data-execution_count="210">
+<div class="sourceCode" id="cb22"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="bu">min</span> <span class="op">=</span> np.<span class="bu">min</span>(df[<span class="st">&quot;NObeyesdad&quot;</span>])</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="bu">max</span> <span class="op">=</span> np.<span class="bu">max</span>(df[<span class="st">&quot;NObeyesdad&quot;</span>])</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>fig, axs <span class="op">=</span> plt.subplots(<span class="dv">5</span>, figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">15</span>))</span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">5</span>):</span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a>    axs[i].hist(weights_dfs[i][<span class="st">&quot;NObeyesdad&quot;</span>], <span class="bu">range</span><span class="op">=</span>(<span class="bu">min</span>, <span class="bu">max</span>), alpha<span class="op">=</span><span class="fl">0.7</span>, label<span class="op">=</span>labels[i])</span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a>    axs[i].<span class="bu">set</span>(title<span class="op">=</span><span class="ss">f&quot;Distribution of obesity level for </span><span class="sc">{</span>labels[i]<span class="sc">}</span><span class="ss">&quot;</span>, ylabel<span class="op">=</span><span class="st">&quot;Frequency&quot;</span>)</span>
+<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<div class="output display_data">
+<p><img
+src="vertopal_8dce5c7514b6453aa588921b65c94266/25379fb530217d403b898ecf1fb4c699907fe377.png" /></p>
+</div>
+</div>
+<div class="cell code" data-execution_count="216">
+<div class="sourceCode" id="cb23"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create subsets based on FCVC values</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>fcvc_groups <span class="op">=</span> df.groupby([<span class="st">&quot;FCVC&quot;</span>])</span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Define obesity levels and initialize counts</span></span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>obesity_levels <span class="op">=</span> [<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>]</span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>obesity_counts <span class="op">=</span> {fcvc_value: np.zeros(<span class="bu">len</span>(obesity_levels)) <span class="cf">for</span> fcvc_value <span class="kw">in</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>]}</span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Count the occurrences of each obesity level in each subset</span></span>
+<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> fcvc_value, fcvc_df <span class="kw">in</span> fcvc_groups:</span>
+<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a>    fcvc_counts <span class="op">=</span> fcvc_df[<span class="st">&quot;NObeyesdad&quot;</span>].value_counts().reindex(obesity_levels, fill_value<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a>    obesity_counts[fcvc_value] <span class="op">=</span> fcvc_counts.values</span>
+<span id="cb23-12"><a href="#cb23-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-13"><a href="#cb23-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot the data</span></span>
+<span id="cb23-14"><a href="#cb23-14" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots()</span>
+<span id="cb23-15"><a href="#cb23-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-16"><a href="#cb23-16" aria-hidden="true" tabindex="-1"></a>x_axis <span class="op">=</span> np.arange(<span class="bu">len</span>(obesity_levels))</span>
+<span id="cb23-17"><a href="#cb23-17" aria-hidden="true" tabindex="-1"></a>bar_width <span class="op">=</span> <span class="fl">0.2</span></span>
+<span id="cb23-18"><a href="#cb23-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-19"><a href="#cb23-19" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, fcvc_value <span class="kw">in</span> <span class="bu">enumerate</span>(obesity_counts.keys()):</span>
+<span id="cb23-20"><a href="#cb23-20" aria-hidden="true" tabindex="-1"></a>    ax.bar(x_axis <span class="op">+</span> (i <span class="op">-</span> <span class="dv">1</span>) <span class="op">*</span> bar_width, obesity_counts[fcvc_value], width<span class="op">=</span>bar_width, alpha<span class="op">=</span><span class="fl">0.7</span>, label<span class="op">=</span><span class="ss">f&quot;FCVC </span><span class="sc">{</span>fcvc_value<span class="sc">}</span><span class="ss">&quot;</span>)</span>
+<span id="cb23-21"><a href="#cb23-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-22"><a href="#cb23-22" aria-hidden="true" tabindex="-1"></a>ax.<span class="bu">set</span>(title<span class="op">=</span><span class="st">&quot;Obesity Levels by FCVC&quot;</span>, xlabel<span class="op">=</span><span class="st">&quot;Obesity Level&quot;</span>, ylabel<span class="op">=</span><span class="st">&quot;Count&quot;</span>)</span>
+<span id="cb23-23"><a href="#cb23-23" aria-hidden="true" tabindex="-1"></a>ax.set_xticks(x_axis)</span>
+<span id="cb23-24"><a href="#cb23-24" aria-hidden="true" tabindex="-1"></a>ax.set_xticklabels(obesity_levels)</span>
+<span id="cb23-25"><a href="#cb23-25" aria-hidden="true" tabindex="-1"></a>ax.legend(title<span class="op">=</span><span class="st">&quot;FCVC&quot;</span>)</span>
+<span id="cb23-26"><a href="#cb23-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-27"><a href="#cb23-27" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb23-28"><a href="#cb23-28" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<div class="output display_data">
+<p><img
+src="vertopal_8dce5c7514b6453aa588921b65c94266/40d3e54eae14107ca40f63e936ac195d73866b2b.png" /></p>
+</div>
+</div>
+<div class="cell code">
+<div class="sourceCode" id="cb24"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create subsets based on family history with overweight</span></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>fam_his <span class="op">=</span> df.groupby([<span class="st">&quot;family_history_with_overweight&quot;</span>])</span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>yes_df <span class="op">=</span> fam_his.get_group(<span class="dv">1</span>)</span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>no_df <span class="op">=</span> fam_his.get_group(<span class="dv">0</span>)</span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Count the occurrences of each obesity level in each subset</span></span>
+<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a>obesity_levels <span class="op">=</span> [<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>]</span>
+<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-9"><a href="#cb24-9" aria-hidden="true" tabindex="-1"></a>yes_counts <span class="op">=</span> yes_df[<span class="st">&quot;NObeyesdad&quot;</span>].value_counts().reindex(obesity_levels, fill_value<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb24-10"><a href="#cb24-10" aria-hidden="true" tabindex="-1"></a>no_counts <span class="op">=</span> no_df[<span class="st">&quot;NObeyesdad&quot;</span>].value_counts().reindex(obesity_levels, fill_value<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb24-11"><a href="#cb24-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-12"><a href="#cb24-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot the data</span></span>
+<span id="cb24-13"><a href="#cb24-13" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots()</span>
+<span id="cb24-14"><a href="#cb24-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-15"><a href="#cb24-15" aria-hidden="true" tabindex="-1"></a>x_axis <span class="op">=</span> np.arange(<span class="bu">len</span>(obesity_levels))</span>
+<span id="cb24-16"><a href="#cb24-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-17"><a href="#cb24-17" aria-hidden="true" tabindex="-1"></a>ax.bar(x_axis <span class="op">-</span> <span class="fl">0.2</span>, yes_counts, width<span class="op">=</span><span class="fl">0.4</span>, color<span class="op">=</span><span class="st">&quot;tab:orange&quot;</span>, alpha<span class="op">=</span><span class="fl">0.7</span>, label<span class="op">=</span><span class="st">&quot;Yes family history with overweight&quot;</span>)</span>
+<span id="cb24-18"><a href="#cb24-18" aria-hidden="true" tabindex="-1"></a>ax.bar(x_axis <span class="op">+</span> <span class="fl">0.2</span>, no_counts, width<span class="op">=</span><span class="fl">0.4</span>, color<span class="op">=</span><span class="st">&quot;tab:blue&quot;</span>, alpha<span class="op">=</span><span class="fl">0.7</span>, label<span class="op">=</span><span class="st">&quot;No family history with overweight&quot;</span>)</span>
+<span id="cb24-19"><a href="#cb24-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-20"><a href="#cb24-20" aria-hidden="true" tabindex="-1"></a>ax.<span class="bu">set</span>(title<span class="op">=</span><span class="st">&quot;Obesity Levels by Family History with Overweight&quot;</span>, xlabel<span class="op">=</span><span class="st">&quot;Obesity Level&quot;</span>, ylabel<span class="op">=</span><span class="st">&quot;Count&quot;</span>)</span>
+<span id="cb24-21"><a href="#cb24-21" aria-hidden="true" tabindex="-1"></a>ax.set_xticks(x_axis)</span>
+<span id="cb24-22"><a href="#cb24-22" aria-hidden="true" tabindex="-1"></a>ax.set_xticklabels(obesity_levels, rotation<span class="op">=</span><span class="dv">45</span>, ha<span class="op">=</span><span class="st">&quot;right&quot;</span>)</span>
+<span id="cb24-23"><a href="#cb24-23" aria-hidden="true" tabindex="-1"></a>ax.legend()</span>
+<span id="cb24-24"><a href="#cb24-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-25"><a href="#cb24-25" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb24-26"><a href="#cb24-26" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<div class="output display_data">
+<p><img
+src="vertopal_8dce5c7514b6453aa588921b65c94266/4e65a31759d09a9de6c94d18c7ead1e12d1e773f.png" /></p>
+</div>
+</div>
+<div class="cell code">
+<div class="sourceCode" id="cb25"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(<span class="dv">1</span>)</span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>genders <span class="op">=</span> df.groupby([<span class="st">&quot;Gender&quot;</span>])</span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>female_df <span class="op">=</span> genders.get_group(<span class="dv">0</span>)</span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a>male_df <span class="op">=</span> genders.get_group(<span class="dv">1</span>)</span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a>x1, y1 <span class="op">=</span> female_df[<span class="st">&quot;Age&quot;</span>], female_df[<span class="st">&quot;NObeyesdad&quot;</span>]</span>
+<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a>x2, y2 <span class="op">=</span> male_df[<span class="st">&quot;Age&quot;</span>], male_df[<span class="st">&quot;NObeyesdad&quot;</span>]</span>
+<span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-10"><a href="#cb25-10" aria-hidden="true" tabindex="-1"></a>ax.scatter(x1, y1, color<span class="op">=</span><span class="st">&quot;tab:orange&quot;</span>, alpha<span class="op">=</span><span class="fl">0.7</span>, label<span class="op">=</span><span class="st">&quot;Female&quot;</span>)</span>
+<span id="cb25-11"><a href="#cb25-11" aria-hidden="true" tabindex="-1"></a>ax.scatter(x2, y2, color<span class="op">=</span><span class="st">&quot;tab:blue&quot;</span>, alpha<span class="op">=</span><span class="fl">0.7</span>, label<span class="op">=</span><span class="st">&quot;Male&quot;</span>)</span>
+<span id="cb25-12"><a href="#cb25-12" aria-hidden="true" tabindex="-1"></a>ax.<span class="bu">set</span>(title<span class="op">=</span><span class="st">&quot;Age vs Obesity Level by Gender&quot;</span>, xlabel<span class="op">=</span><span class="st">&quot;Age&quot;</span>, ylabel<span class="op">=</span><span class="st">&quot;Obesity Level&quot;</span>)</span>
+<span id="cb25-13"><a href="#cb25-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-14"><a href="#cb25-14" aria-hidden="true" tabindex="-1"></a>m1, b1 <span class="op">=</span> np.polyfit(x1, y1, <span class="dv">1</span>)</span>
+<span id="cb25-15"><a href="#cb25-15" aria-hidden="true" tabindex="-1"></a>ax.plot(x1, m1<span class="op">*</span>x1<span class="op">+</span>b1, color<span class="op">=</span><span class="st">&quot;green&quot;</span>, alpha<span class="op">=</span><span class="fl">0.7</span>, label<span class="op">=</span><span class="st">&quot;Female Line&quot;</span>)</span>
+<span id="cb25-16"><a href="#cb25-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-17"><a href="#cb25-17" aria-hidden="true" tabindex="-1"></a>m2, b2 <span class="op">=</span> np.polyfit(x2, y2, <span class="dv">1</span>)</span>
+<span id="cb25-18"><a href="#cb25-18" aria-hidden="true" tabindex="-1"></a>ax.plot(x2, m2<span class="op">*</span>x2<span class="op">+</span>b2, color<span class="op">=</span><span class="st">&quot;purple&quot;</span>, alpha<span class="op">=</span><span class="fl">0.7</span>, label<span class="op">=</span><span class="st">&quot;Male Line&quot;</span>)</span>
+<span id="cb25-19"><a href="#cb25-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-20"><a href="#cb25-20" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
+<span id="cb25-21"><a href="#cb25-21" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb25-22"><a href="#cb25-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-23"><a href="#cb25-23" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f&quot;For women, obesity level increases by </span><span class="sc">{</span><span class="bu">abs</span>(m1)<span class="sc">:.3f}</span><span class="ss"> per year on average&quot;</span>)</span>
+<span id="cb25-24"><a href="#cb25-24" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f&quot;For men, obesity level increases by </span><span class="sc">{</span><span class="bu">abs</span>(m2)<span class="sc">:.3f}</span><span class="ss"> per year on average&quot;</span>)</span></code></pre></div>
+<div class="output display_data">
+<p><img
+src="vertopal_8dce5c7514b6453aa588921b65c94266/ab8d178679bc39b592b8b6f6d8a0e27695244c9c.png" /></p>
+</div>
+<div class="output stream stdout">
+<pre><code>For women, obesity level increases by 0.008 per year on average
+For men, obesity level increases by 0.050 per year on average
+</code></pre>
+</div>
+</div>
+<div class="cell code">
+<div class="sourceCode" id="cb27"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>female_r <span class="op">=</span> np.corrcoef(x1, y1)[<span class="dv">0</span>, <span class="dv">1</span>]</span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>male_r <span class="op">=</span> np.corrcoef(x2, y2)[<span class="dv">0</span>, <span class="dv">1</span>]</span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f&quot;Pearson (r) coef for female dataset: </span><span class="sc">{</span>female_r<span class="sc">}</span><span class="ss">&quot;</span>)</span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f&quot;Pearson (r) coef for male dataset: </span><span class="sc">{</span>male_r<span class="sc">}</span><span class="ss">&quot;</span>)</span></code></pre></div>
+<div class="output stream stdout">
+<pre><code>Pearson (r) coef for female dataset: 0.042916420545538826
+Pearson (r) coef for male dataset: 0.41409837411683886
+</code></pre>
+</div>
+</div>
 </body>
 </html>
